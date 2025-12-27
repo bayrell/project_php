@@ -1,5 +1,5 @@
 {
-    "name": "baylang/project",
+    "name": "app/project",
     "type": "project",
     "authors": [],
     "require": {
