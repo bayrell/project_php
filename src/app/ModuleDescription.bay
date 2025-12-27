@@ -1,0 +1,59 @@
+namespace App;
+
+use Runtime.Entity.Hook;
+use Runtime.Web.Annotations.Route;
+use Runtime.Web.Hooks.PageNotFound;
+use Runtime.Web.Hooks.Components;
+use Runtime.Web.Hooks.SetupLayout;
+
+
+class ModuleDescription
+{
+	/**
+	 * Returns module name
+	 */
+	pure string getModuleName() => "App";
+	
+	
+	/**
+	 * Returns module version
+	 */
+	pure string getModuleVersion() => "0.0.1";
+	
+	
+	/**
+	 * Returns required modules
+	 * @return Map<string>
+	 */
+	pure Dict<string> requiredModules() =>
+	{
+		"Runtime.Web": "*",
+		"Runtime.Widget": "*",
+	};
+	
+	
+	/**
+	 * Returns enities
+	 */
+	pure Collection<Dict> entities() =>
+	[		
+		/* Setup layout */
+		SetupLayout::hook({
+			"default": "App.Components.Layout.DefaultLayoutModel",
+		}),
+		
+		/* Components */
+		Components::hook([
+			"App.Components.Blocks.CSS",
+		]),
+		Components::footer([
+			"App.Components.Blocks.Script"
+		]),
+		
+		PageNotFound::hook("App.Components.Pages.NotFoundPage.NotFoundPageModel"),
+		
+		#ifdef BACKEND then
+		new Route("App.Components.Pages.Routes"),
+		#endif
+	];
+}

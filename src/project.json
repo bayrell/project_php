@@ -1,0 +1,27 @@
+{
+    "name": "Project name",
+    "description": "Description",
+    "license": "MIT",
+    "author": "",
+    "languages": ["php", "es6"],
+    "modules": [
+        {
+            "src": "app",
+            "type": "module"
+        },
+        {
+            "src": "lib",
+            "type": "folder"
+        }
+    ],
+    "assets": [
+        {
+            "type": "js",
+            "dest": "public/assets/app.js",
+            "modules": [
+                "@app"
+            ]
+        }
+    ],
+    "exclude": []
+}

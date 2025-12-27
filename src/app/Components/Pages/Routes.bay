@@ -1,0 +1,28 @@
+namespace App.Components.Pages;
+
+use Runtime.Web.BaseRoute;
+use Runtime.Web.RouteInfo;
+use Runtime.Web.RouteModel;
+
+
+class Routes extends BaseRoute
+{
+	/**
+	 * Returns layout name
+	 */
+	static string getLayoutName() => "default";
+	
+	
+	/**
+	 * Returns routes
+	 */
+	static Vector<RouteInfo> getRoutes() =>
+	[
+		new RouteModel
+		{
+			"uri": "/",
+			"name": "app:index",
+			"model": "App.Components.Pages.IndexPage.IndexPageModel"
+		}
+	];
+}

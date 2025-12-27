@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template>
+	<uid>app.project</uid>
+	<name>Project</name>
+	<version>1.0</version>
+	<arch>amd64</arch>
+	<arch>arm64v8</arch>
+	<arch>arm32v7</arch>
+	<yaml>
+		<services>
+			<_var_app_name_>
+				<image>docker.io/app/project:1.0</image>
+				<hostname>{{.Service.Name}}.{{.Task.ID}}.local</hostname>
+				<environment>
+					<WWW_UID>_var_www_uid_</WWW_UID>
+					<WWW_GID>_var_www_gid_</WWW_GID>
+					<DOCUMENT_ROOT>/var/www/html/public</DOCUMENT_ROOT>
+				</environment>
+				<volumes>_var_app_name_:/data</volumes>
+				<volumes>_var_folder_www_:/app</volumes>
+			</_var_app_name_>
+		</services>
+    <volumes>
+		<_var_app_name_ />
+    </volumes>
+	</yaml>
+	<variables>
+		<variable>
+			<name>_var_app_name_</name>
+			<label>App name</label>
+			<type>string</type>
+		</variable>
+		<variable>
+			<name>_var_www_uid_</name>
+			<label>www user id</label>
+			<type>string</type>
+			<default>1000</default>
+		</variable>
+		<variable>
+			<name>_var_www_gid_</name>
+			<label>www group id</label>
+			<type>string</type>
+			<default>1000</default>
+		</variable>
+		<variable>
+			<name>_var_folder_www_</name>
+			<label>Project location on Host</label>
+			<type>string</type>
+		</variable>
+	</variables>
+	<modificators>
+		<li>org.bayrell.modificator.cloud_os</li>
+		<li>org.bayrell.modificator.deploy_hostname</li>
+	</modificators>
+	<patch>
+		<name>Template patch</name>
+		<operations>
+		</operations>
+	</patch>
+</template>

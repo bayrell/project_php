@@ -1,0 +1,9 @@
+<class name="App.Components.Blocks.CSS">
+
+<style global="true">
+body, html{
+    padding: 0; margin: 0;
+}
+</style>
+
+</class>

@@ -1,0 +1,10 @@
+namespace App.Components.Layout;
+
+use Runtime.BaseLayout;
+use App.Components.Layout.DefaultLayout;
+
+
+class DefaultLayoutModel extends BaseLayout
+{
+	string component = classof DefaultLayout;
+}

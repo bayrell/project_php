@@ -1,0 +1,14 @@
+<class name="App.Components.Pages.NotFoundPage.NotFoundPage">
+
+<style>
+.not_found_page{
+}
+</style>
+
+<template>
+	<div class="page not_found_page">
+		Page not found
+	</div>
+</template>
+
+</class>

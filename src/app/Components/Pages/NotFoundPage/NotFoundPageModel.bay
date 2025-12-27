@@ -1,0 +1,30 @@
+namespace App.Components.Pages.NotFoundPage;
+
+use Runtime.BaseModel;
+use Runtime.Serializer.ObjectType;
+use Runtime.Web.RenderContainer;
+use App.Components.Pages.NotFoundPage.NotFoundPage;
+
+class NotFoundPageModel extends BaseModel
+{
+	string component = classof NotFoundPage;
+	
+	
+	/**
+	 * Serialize object
+	 */
+	static void serialize(ObjectType rules)
+	{
+		parent(rules);
+	}
+	
+	
+	/**
+	 * Build title
+	 */
+	void buildTitle(RenderContainer container)
+	{
+		container.layout.setPageTitle("Page not found");
+		container.http_code = 404;
+	}
+}

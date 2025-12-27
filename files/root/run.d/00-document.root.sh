@@ -1,0 +1,2 @@
+DOCUMENT_ROOT=/app/public
+export DOCUMENT_ROOT

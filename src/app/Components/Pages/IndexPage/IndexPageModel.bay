@@ -1,0 +1,29 @@
+namespace App.Components.Pages.IndexPage;
+
+use Runtime.BaseModel;
+use Runtime.Serializer.ObjectType;
+use Runtime.Web.RenderContainer;
+use App.Components.Pages.IndexPage.IndexPage;
+
+class IndexPageModel extends BaseModel
+{
+	string component = classof IndexPage;
+	
+	
+	/**
+	 * Serialize object
+	 */
+	static void serialize(ObjectType rules)
+	{
+		parent(rules);
+	}
+	
+	
+	/**
+	 * Build title
+	 */
+	void buildTitle(RenderContainer container)
+	{
+		container.layout.setPageTitle("Index page");
+	}
+}

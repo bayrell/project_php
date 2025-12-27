@@ -1,0 +1,64 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "929994803a650027bae7bcc0e93bc8f4",
+    "packages": [
+        {
+            "name": "baylang/core",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bayrell/baylang-core-php.git",
+                "reference": "2e9370146e553962e741d449684173822cd8ecd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bayrell/baylang-core-php/zipball/2e9370146e553962e741d449684173822cd8ecd3",
+                "reference": "2e9370146e553962e741d449684173822cd8ecd3",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Runtime\\": "src/Runtime",
+                    "Runtime\\ORM\\": "src/Runtime.ORM",
+                    "Runtime\\Web\\": "src/Runtime.Web",
+                    "Runtime\\Core\\": "src/Runtime.Core",
+                    "Runtime\\Test\\": "src/Runtime.Test",
+                    "Runtime\\Unit\\": "src/Runtime.Unit",
+                    "Runtime\\Crypt\\": "src/Runtime.Crypt",
+                    "Runtime\\Widget\\": "src/Runtime.Widget",
+                    "Runtime\\Console\\": "src/Runtime.Console"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Ildar Bikmamatov",
+                    "email": "ildar@bayrell.org"
+                }
+            ],
+            "description": "BayLang core for PHP",
+            "support": {
+                "issues": "https://github.com/bayrell/baylang-core-php/issues",
+                "source": "https://github.com/bayrell/baylang-core-php/tree/1.1.0"
+            },
+            "time": "2025-12-27T19:25:07+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}

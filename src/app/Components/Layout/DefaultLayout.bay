@@ -1,0 +1,17 @@
+<class name="App.Components.Layout.DefaultLayout" extends="Runtime.DefaultLayout">
+
+<use name="Runtime.Widget.Section" component="true" />
+<use name="App.Components.Blocks.CSS" component="true" />
+
+<style>
+.layout{
+}
+</style>
+
+<template>
+	<Section class="layout layout--default">
+		%render this.renderCurrentPage();
+	</Section>
+</template>
+
+</class>
