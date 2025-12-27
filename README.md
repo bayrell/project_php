@@ -20,12 +20,12 @@ Build test container
 
 Build prod container
 ```
-./build.sh prod
+./build.sh docker
 ```
 
 Run container:
 ```
-docker run -it app/project:1.0 -p 8000:80 -v ./src:/app baylang_project
+docker run -d -p 8000:80 -v ./src:/var/www/html --name app_project app/project:1.0
 ```
 
 
@@ -33,7 +33,7 @@ docker run -it app/project:1.0 -p 8000:80 -v ./src:/app baylang_project
 
 Enter container:
 ```
-docker exec -it baylang_project
+docker exec -it app_project bash
 ```
 
 Change folder
@@ -59,4 +59,13 @@ Install Assets
 Watch changes
 ```
 baylang-php watch
+```
+
+
+## Stop container
+
+If you want to stop container run:
+```
+docker stop app_project
+docker rm app_project
 ```

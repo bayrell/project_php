@@ -2,6 +2,5 @@
     "name": "baylang/project",
     "type": "project",
     "license": "MIT",
-    "readme": "README.md",
     "version": "1.0.0"
 }
