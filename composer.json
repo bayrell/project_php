@@ -1,5 +1,7 @@
 {
     "name": "baylang/project",
     "type": "project",
-    "authors": []
+    "authors": [],
+    "license": "MIT",
+    "version": "1.0.0"
 }
