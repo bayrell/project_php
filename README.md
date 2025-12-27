@@ -2,7 +2,7 @@
 
 Create project
 ```
-composer create-project baylang/project
+composer create-project baylang/project --no-install --no-scripts
 ```
 
 Change folder

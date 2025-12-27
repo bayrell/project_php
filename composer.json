@@ -1,7 +1,7 @@
 {
     "name": "baylang/project",
     "type": "project",
-    "authors": [],
     "license": "MIT",
+    "readme": "README.md",
     "version": "1.0.0"
 }

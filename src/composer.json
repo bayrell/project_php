@@ -1,7 +1,7 @@
 {
     "name": "app/project",
     "type": "project",
-    "authors": [],
+    "license": "MIT",
     "require": {
         "baylang/core": "^1.0"
     },
