@@ -2,7 +2,7 @@
 
 <template>
     <script src="/assets/vue.global.prod.js"></script>
-    <script src="/assets/runtime.js"></script>
+    <script src="/assets/runtime.min.js"></script>
     <script src="/assets/app.js"></script>
 </template>
 

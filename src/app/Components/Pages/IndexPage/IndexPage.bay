@@ -1,13 +1,33 @@
 <class name="App.Components.Pages.IndexPage.IndexPage">
 
+<use name="Runtime.Widget.Button" component="true" />
+
 <style>
-.index_page{}
+.index_page{
+	padding-top: 100px;
+	text-align: center;
+	.message{
+		margin-bottom: var(--space);
+	}
+}
 </style>
 
 <template>
 	<div class="page index_page">
-		Hello world!
+		<div class="message">{{ this.message }}</div>
+		<Button @event:click="this.onClick()">Click</Button>
 	</div>
 </template>
+
+<script>
+
+string message = "Hello world!";
+
+void onClick()
+{
+	this.message ~= "!";
+}
+
+</script>
 
 </class>
