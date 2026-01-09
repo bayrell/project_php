@@ -1,12 +1,18 @@
 # PHP BayLang project
 
+BayLang is lowcode fullstack technology for development CRM and ERP system.
+
+Clear PHP project
+
 Create project
 ```
-composer create-project baylang/project --no-install --no-scripts
+wget https://github.com/bayrell/project_php/archive/refs/heads/main.zip -O "project.zip"
+unzip project.zip
 ```
 
 Change folder
 ```
+mv project_php-main project
 cd project
 ```
 
